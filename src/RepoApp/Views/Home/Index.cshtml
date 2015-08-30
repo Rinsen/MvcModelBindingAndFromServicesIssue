@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <h1>Eample 1</h1>
+    <form id="myform1">
+        <input type="submit" value="Submit" />
+    </form>
+    <script>
+        $("#myform1").submit(function () {
+            $.ajax({
+                url: '/Home/Example1',
+                dataType: 'json',
+                data: '{ "MyProperty" : 12345 }',
+                contentType: "application/json; charset=utf-8",
+                type: 'POST',
+                success: function (data) {
+                }
+            });
+            return false;
+        });
+    </script>
+    <h1>Eample 2</h1>
+    <form id="myform2">
+        <input type="submit" value="Submit" />
+    </form>
+    <script>
+        $("#myform2").submit(function () {
+            $.ajax({
+                url: '/Home/Example2',
+                dataType: 'json',
+                data: '{ "MyProperty" : 12345 }',
+                contentType: "application/json; charset=utf-8",
+                type: 'POST',
+                success: function (data) {
+                }
+            });
+            return false;
+        });
+    </script>
+
+</body>
+</html>
