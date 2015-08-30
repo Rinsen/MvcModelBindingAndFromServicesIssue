@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
 using Microsoft.Framework.DependencyInjection;
+using Microsoft.AspNet.Mvc;
 
 namespace RepoApp
 {
@@ -17,6 +18,11 @@ namespace RepoApp
 
             // Add MVC services to the services container.
             services.AddMvc();
+
+            //services.AddMvc().Configure<MvcOptions>(options =>
+            //{
+            //    options.Filters.Add(new AppExceptionFilter());
+            //});
         }
 
         public void Configure(IApplicationBuilder app)

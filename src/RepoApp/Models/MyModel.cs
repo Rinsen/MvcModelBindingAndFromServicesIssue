@@ -7,6 +7,15 @@ namespace RepoApp.Models
 {
     public class MyModel : IValidatableObject
     {
+        // This is how I would like to do it!
+        // But I get a "No parameterless constructor defined for this object." error if I do. :(
+        //MyService _myService;
+
+        //public MyModel(MyService service)
+        //{
+        //    _myService = service;
+        //}
+
 
         public int MyProperty { get; set; }
 
